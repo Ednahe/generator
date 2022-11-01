@@ -1,0 +1,79 @@
+.section_space {
+    margin-bottom: 80px;
+    .contain_regle {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 32px;
+        padding: 1em;
+        .contain_svg_regle {
+            display: flex;
+            flex-direction: column;
+            object-fit: cover;
+            align-items: center;
+            padding: 0.75em;
+            box-shadow: 1px 1px 2px 2px red;
+            border-radius: 4px;
+            img {
+                height: 24px;
+                width: 24px;
+                filter: invert(77%) sepia(8%) saturate(2122%) hue-rotate(176deg) brightness(95%) contrast(92%);
+            }
+            p {
+                color: aliceblue;
+            }
+        }
+    }
+    .contain_arrow {
+        object-fit: contain;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        gap: 32px;
+        p {
+            color: aliceblue;
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+            filter: invert(77%) sepia(27%) saturate(523%) hue-rotate(176deg) brightness(99%) contrast(92%);
+            animation: upDown 2s infinite;
+        }
+
+        @keyframes upDown {
+            0% {
+                transform: translateY(0);
+            }
+
+            25% {
+                transform: translateY(-24px);
+            }
+
+            50% {
+                transform: translateY(0);
+            }
+
+            75% {
+                transform: translateY(-16px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    .contain_canvas {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        #gameboard {
+            border: 2px dotted whitesmoke;
+            border-radius: 16px;
+        }
+    }
+}

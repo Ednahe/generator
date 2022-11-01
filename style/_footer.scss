@@ -1,0 +1,48 @@
+footer {
+    background-color: rgb(19, 17, 17);
+    border-top: 3px solid brown;
+    z-index: 6666;
+    height: 180px;
+    .contain_footer {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        .contain_txt_footer {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1 0;
+            p {
+                color: antiquewhite;
+                text-align: center;
+                text-shadow: 0 0 0.25rem #7ed4d4, 0 0 0.15rem #7ed4d4;
+            }
+        }
+        .contain_svg_footer {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1 0;
+            h3 {
+                color: #faebd7;
+                text-align: center;
+                text-shadow: 0 0 0.5rem #7ed4d4, 0 0 0.5rem #7ed4d4;
+            }
+            .contain_link {
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                justify-content: center;
+                .contain_svg_contact {
+                    object-fit: contain;                    
+                    img {
+                        text-align: center;
+                        height: 24px;
+                        width: 24px;
+                        filter: invert(89%) sepia(9%) saturate(494%) hue-rotate(343deg) brightness(105%) contrast(96%);
+                    }
+                }
+            }
+        }
+    }
+}

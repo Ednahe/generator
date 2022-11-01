@@ -1,0 +1,438 @@
+main {
+  background-size: 100% 100%;
+  margin-left: 24px;
+  margin-right: 24px;
+  border-radius: 16px;
+  height: 660px;
+
+  .first_section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    .contain_gif {
+      .chenille {
+        animation: animateChenille 20s infinite;
+        position: absolute;
+        top: 12%;
+      }
+
+      @keyframes animateChenille {
+        from {
+          transform: translateX(0);
+        }
+
+        to {
+          transform: translateX(100vw);
+        }
+      }
+    }
+
+    .contain_move_quote {
+      position: absolute;
+      border-radius: 16px;
+      padding: 1em;
+      animation: moving 45s infinite;
+
+      .contain_int_move_quote {
+        color: antiquewhite;
+      }
+    }
+
+    @keyframes moving {
+      0% {
+        top: 15%;
+        left: 10%;
+      }
+
+      10% {
+        top: 45%;
+        left: 34%;
+      }
+
+      20% {
+        top: 65%;
+        left: 5%;
+      }
+
+      30% {
+        top: 51%;
+        left: 32%;
+      }
+
+      40% {
+        top: 42%;
+        left: 51%;
+      }
+
+      50% {
+        top: 85%;
+        left: 15%;
+      }
+
+      60% {
+        top: 66%;
+        left: 41%;
+      }
+
+      70% {
+        top: 42%;
+        left: 67%;
+      }
+
+      80% {
+        top: 17%;
+        left: 72%;
+      }
+
+      90% {
+        top: 26%;
+        left: 42%;
+      }
+
+      100% {
+        top: 15%;
+        left: 10%;
+      }
+    }
+
+    .button_background {
+      background: #0962EA;
+      background-size: 100%;
+      background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #0962EA), color-stop(100%, #0AA0F6));
+      background-image: -moz-linear-gradient(left, #0962EA, #0AA0F6);
+      background-image: -webkit-linear-gradient(left, #0962EA, #0AA0F6);
+      background-image: linear-gradient(to right, #0962EA, #0AA0F6);
+      border-radius: 1.5em;
+      transition: opacity 300ms;
+      border: none;
+      padding: 20px;
+      color: #FAF15D;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      outline: none;
+      overflow: hidden;
+      position: absolute;
+      cursor: pointer;
+      z-index: 99;
+    }
+
+    .button_background::after {
+      box-shadow: rgba(212, 207, 201, 0.75) 0 0 15px 2px;
+      background: #FAF15D;
+      content: "";
+      height: 2px;
+      opacity: 0;
+    }
+
+    .button_background::before {
+      content: "";
+      opacity: 0;
+    }
+
+    .button_background:hover {
+      animation: glitch 750ms infinite;
+    }
+
+    .button_background:hover::before {
+      opacity: 1;
+    }
+
+    .button_background:hover::after {
+      animation: scan 2s infinite;
+      opacity: 1;
+    }
+
+    @keyframes glitch {
+      0% {
+        transform: skewX(0deg);
+      }
+
+      5% {
+        transform: skewX(2deg);
+        opacity: 0.75;
+      }
+
+      10% {
+        transform: skewX(0deg);
+        opacity: 1;
+      }
+
+      15% {
+        transform: skewX(-5deg);
+        opacity: 0.75;
+      }
+
+      20% {
+        transform: skewX(0deg);
+        opacity: 1;
+      }
+
+      45% {
+        transform: skewX(3deg);
+        opacity: 0.75;
+      }
+
+      50% {
+        transform: skewX(0deg);
+        opacity: 1;
+      }
+
+      55% {
+        transform: skewX(0deg);
+        opacity: 0.75;
+      }
+
+      60% {
+        transform: skewX(0deg);
+        opacity: 1;
+      }
+
+      75% {
+        transform: skewX(2deg);
+      }
+
+      80% {
+        transform: skewX(0deg);
+      }
+
+      85% {
+        transform: skewX(-8deg);
+        opacity: 0.75;
+      }
+
+      90% {
+        transform: skewX(0deg);
+        opacity: 1;
+      }
+
+      100% {
+        transform: skewX(0deg);
+      }
+    }
+
+    @keyframes scan {
+      0% {
+        top: 0%;
+      }
+
+      50% {
+        top: 97%;
+      }
+
+      100% {
+        top: 0%;
+      }
+    }
+
+    .button_background::after,
+    .button_background::before {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5em;
+      text-align: center;
+      flex: 1 0;
+
+      .contain_button {
+        display: flex;
+        justify-content: center;
+
+        button {
+          background-image: linear-gradient(to right, #3a6186 0%, #89253e 51%, #3a6186 100%);
+          margin: 10px;
+          padding: 15px 45px;
+          text-align: center;
+          transition: 0.5s;
+          background-size: 200% auto;
+          color: white;
+          box-shadow: 0 0 8px #eee;
+          border-radius: 16px;
+          display: block;
+          z-index: 99;
+        }
+
+        button:hover {
+          cursor: pointer;
+          background-position: right center;
+          color: #fff;
+          text-decoration: none;
+        }
+
+        button:active {
+          opacity: 0.8;
+        }
+      }
+
+      .contain_quote {
+        box-shadow: 2px 5px 30px 3px rgb(155, 59, 245);
+        margin: 0 auto;
+        border-radius: 16px;
+        margin-top: 1.5em;
+
+        .contain_int_quote {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          padding: 1.5rem;
+          color: whitesmoke;
+          z-index: 99;
+        }
+      }
+    }
+
+    .contain_toast {
+      flex: 1 0;
+      max-width: 120px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .notif {
+        color: antiquewhite;
+        position: relative;
+        z-index: 99999;
+        padding: 0.5em;
+        background-color: rgba(2, 16, 16, 0.421);
+        margin-right: 15px;
+        box-shadow: 1px 1px 1px 1px red;
+        text-align: center;
+        z-index: 9;
+      }
+    }
+  }
+
+  .second_section {
+    margin-bottom: 50px;
+
+    .contain_rain {
+      display: flex;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
+
+      .goutte {
+        position: fixed;
+        top: -1vh;
+        transform: translateY(0);
+        animation: rain 3s linear;
+        z-index: 9999;
+        object-fit: cover;
+        height: 40px;
+        width: 40px;
+      }
+
+      @keyframes rain {
+        to {
+          transform: translateY(105vh);
+        }
+      }
+    }
+
+    .contain_second_section {
+      display: flex;
+      flex-direction: row;
+      gap: 140px;
+      justify-content: center;
+      align-items: center;
+
+      .contain_adaptive_img {
+        object-fit: cover;
+        z-index: 99;
+        cursor: pointer;
+
+        img {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          transform-style: preserve-3d;
+          transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          border: 3px solid orangered;
+        }
+
+        .haddock {
+          backface-visibility: hidden;
+          position: absolute;
+        }
+
+        .tournesol {
+          backface-visibility: hidden;
+          position: absolute;
+        }
+
+        .card {
+          transform: rotateY(180deg);
+        }
+      }
+
+      .contain_second_button {
+        display: flex;
+        justify-content: center;
+        transform: translateY(60px);
+        .second_button {
+          color: white;
+          border: 2px solid rgb(146, 226, 226);
+          padding: 1em;
+          border-radius: 40px;
+          z-index: 99;
+        }
+
+        .second_button:hover {
+          cursor: pointer;
+        }
+
+        .second_button:active {
+          opacity: 0.8;
+        }
+
+        .third_button {
+          color: white;
+          border: 2px solid rgb(146, 226, 226);
+          padding: 1em;
+          border-radius: 40px;
+          display: none;
+          z-index: 99;
+        }
+
+        .third_button:hover {
+          cursor: pointer;
+        }
+
+        .third_button:active {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .third_section {
+    .revelate_grass {
+      display: flex;
+      flex-direction: row;
+      object-fit: contain;
+      background-image: url(../image/grass.png);
+      background-size: contain;
+      height: 160px;
+      animation: revelateGrass 4s ease-in;
+      transform: translateY(120px);
+    }
+
+    @keyframes revelateGrass {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  }
+}
