@@ -1,5 +1,8 @@
 .section_space {
     margin-bottom: 80px;
+    .contain_responsive {
+        display: none;
+    }
     .contain_regle {
         display: flex;
         flex-direction: row;
